@@ -86,9 +86,9 @@ body {
     z-index: 10000;
     position: fixed;
     width: 500px;
-    left: calc(50% - 500px / 2);
+    left: calc(50vw - 500px / 2);
     height: 150px;
-    top: calc(50% - 150px / 2);
+    top: calc(50vh - 150px / 2);
     background-color: #444;
     border: 2px solid #555;
     border-radius: 2px;

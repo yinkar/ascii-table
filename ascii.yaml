@@ -42,7 +42,7 @@
   ord: 8
   abbr: "BS"
   name: "Backspace"
-  key: "Backspace"
+  key: " ⌫"
   wikipedia: "/Backspace"
 - 
   ord: 9
@@ -69,6 +69,7 @@
   ord: 13
   abbr: "CR"
   name: "Carriage Return"
+  key: " ⏎"
   wikipedia: "/Carriage_Return"
 - 
   ord: 14
@@ -139,7 +140,7 @@
   ord: 27
   abbr: "ESC"
   name: "Escape"
-  key: "Escape"
+  key: "Esc"
   wikipedia: "/Escape_character"
 - 
   ord: 28

@@ -80,17 +80,20 @@ const buildTable = (tableData) => {
                 Binary: 0b${cellData.ord.toString(2)}
                 Octal: 0o${cellData.ord.toString(8)}
                 Hexadecimal: 0x${cellData.ord.toString(16)}
-                ${
-                    cellData.key !== undefined ? 
-                        (`Key: ${cellData.key}`) : 
-                        ''
-                }`;
+                `;
 
             const keyElement = document.createElement('kbd');
             keyElement.innerText = cellData.key !== undefined ?
                                         cellData.key : 
-                                        '';
-            popupElement.appendChild(keyElement);
+                                        (
+                                            cellData.character !== undefined ?
+                                                cellData.character :
+                                                ''
+                                        );
+            
+            if (cellData.key || cellData.character) {
+                popupElement.appendChild(keyElement);
+            }
 
             const wikipediaLinkElement = document.createElement('a');
             wikipediaLinkElement.href = cellData.wikipedia !== undefined ?
@@ -108,7 +111,7 @@ const buildTable = (tableData) => {
                             ''
                     )
                 })`;
-            wikipediaLinkElement.classList.add('cell-wikipedia-link');
+            wikipediaLinkElement.classList.add('wikipedia-link');
             popupElement.appendChild(wikipediaLinkElement);
             
             document.body.appendChild(popupOverlay);
@@ -117,6 +120,7 @@ const buildTable = (tableData) => {
 
         tableElement.appendChild(cell);
     });
+
 };
 
 fetch('ascii.json')

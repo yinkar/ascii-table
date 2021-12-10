@@ -91,10 +91,10 @@ body {
     top: calc(50% - 150px / 2);
     background-color: #444;
     border: 2px solid #555;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 20px 15px;
     overflow: hidden;
-    font-size: .9rem;
+    font-size: .8rem;
     line-height: 1.3rem;
 }
 
@@ -105,4 +105,22 @@ body {
 
 .ascii-popup a:hover {
     color: teal;
+}
+
+.ascii-popup kbd {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background-color: #222;
+    color: #ddd;
+    font-size: 1rem;
+    font-family: monospace;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+}
+
+.ascii-popup .wikipedia-link {
+    display: block;
 }

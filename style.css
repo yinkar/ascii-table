@@ -57,7 +57,7 @@ body {
 }
 
 .ascii-table .cell .cell-content.cell-character {
-    
+    height: 1rem;
 }
 
 .ascii-table .cell .cell-content q {

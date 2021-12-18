@@ -9,9 +9,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.popup-opened {
+    overflow: hidden;
+}
+
 .ascii-table {
     box-sizing: border-box;
-    height: 900px;
+    height: 840px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -85,10 +89,10 @@ body {
 .ascii-popup {
     z-index: 10000;
     position: fixed;
-    width: 500px;
-    left: calc(50vw - 500px / 2);
+    width: 50%;
+    left: calc(50vw - 50% / 2);
     height: 150px;
-    top: calc(50vh - 150px / 2);
+    top: calc(50vh - 50% / 2);
     background-color: #444;
     border: 2px solid #555;
     border-radius: 2px;
@@ -123,4 +127,13 @@ body {
 
 .ascii-popup .wikipedia-link {
     display: block;
+}
+
+@media only screen and (max-width: 600px)  {
+    .ascii-table {
+        box-sizing: border-box;
+        height: 1600px;
+        width: 300px;
+        margin: 0 auto;
+    }
 }

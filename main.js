@@ -58,6 +58,8 @@ const buildTable = (tableData) => {
     popupOverlay.addEventListener('click', () => {
         document.body.removeChild(popupElement);
         document.body.removeChild(popupOverlay);
+
+        document.body.classList.remove('popup-opened');
     });
 
     tableData.forEach((cellData, idx) => {
@@ -116,6 +118,8 @@ const buildTable = (tableData) => {
             
             document.body.appendChild(popupOverlay);
             document.body.appendChild(popupElement);
+
+            document.body.classList.add('popup-opened');
         });
 
         tableElement.appendChild(cell);

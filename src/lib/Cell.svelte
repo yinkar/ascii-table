@@ -59,10 +59,6 @@
     height: 1rem;
 }
 
-.cell .cell-content q {
-    quotes: "„" "“" "‚" "‘";
-}
-
 .cell .cell-name {
     text-overflow: ellipsis;
     overflow: hidden;

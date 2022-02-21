@@ -7,7 +7,8 @@
     "convert": "js-yaml ascii.yml",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
@@ -15,6 +16,7 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "yaml2json": "^1.0.2"
   }
 }

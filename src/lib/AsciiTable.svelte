@@ -1,5 +1,5 @@
 <script>
-    import Character from "./Character.svelte";
+    import Cell from "./Cell.svelte";
     import Popup from "./Popup.svelte";
     
     let showPopup = false;
@@ -34,7 +34,7 @@
 <main>
     <div class="ascii-table">
         {#each ascii as asciiCharacter}
-        <Character 
+        <Cell 
             character={asciiCharacter} 
             clickHandler={openPopup} 
         />

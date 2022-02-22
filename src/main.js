@@ -2,6 +2,8 @@ import App from './App.svelte';
 
 import { registerSW } from 'virtual:pwa-register';
 
+import './style.css';
+
 const updateSW = registerSW({
   onNeedRefresh() {},
   onOfflineReady() {}

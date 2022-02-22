@@ -7,39 +7,39 @@
     <div class="popup-overlay" on:click={() => show = false}></div>
     <div class="ascii-popup">
         <p>
-            Order: {character.ord}
+            <b>Order:</b> {character.ord}
         </p>
 
         {#if !!character.character}
         <p>
-            Character: {character.character}
+            <b>Character:</b> {character.character}
         </p>
         {/if}
 
         {#if !!character.abbr}
         <p>
-            Abbreviation: {character.abbr}
+            <b>Abbreviation:</b> {character.abbr}
         </p>
         {/if}
 
         {#if !!character.name}
         <p>
-            Name: {character.name}
+            <b>Name:</b> {character.name}
         </p>
         {/if}
 
         <p>
-            Binary: 0b{character.ord.toString(2)}
+            <b>Binary:</b> 0b{character.ord.toString(2)}
         </p>
         <p>
-            Octal: 0o{character.ord.toString(8)}
+            <b>Octal:</b> 0o{character.ord.toString(8)}
         </p>
         <p>
-            Hexadecimal: 0x{character.ord.toString(16)}
+            <b>Hexadecimal:</b> 0x{character.ord.toString(16)}
         </p>
 
         <p>
-            <a href={`https://en.wikipedia.org/wiki${character.wikipedia}` || '#'} target="_blank" class="wikipedia-link">Wikipedia ({character.name || character.character || ''})</a>
+            <a href={`https://en.wikipedia.org/wiki${character.wikipedia}` || '#'} target="_blank" class="wikipedia-link">Wikipedia <q>{character.name || character.character || ''}</q></a>
         </p>
         
         {#if !!character.key || !!character.character}
@@ -107,5 +107,9 @@ p {
 
 .ascii-popup .wikipedia-link {
     display: block;
+}
+
+.ascii-popup .wikipedia-link q {
+    quotes: "“" "”" "‘" "’";
 }
 </style>

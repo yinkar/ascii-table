@@ -3,19 +3,19 @@
     export let clickHandler;
 </script>
 
-<main>
-    <div class="cell" title={character.name || character.character || ''} on:click={clickHandler(character)}>
-        <div class="cell-decimal">
-            {character.ord}
-        </div>
-        <div class="cell-content" class:cell-abbr={!!character.abbr} class:cell-character={!!character.character}>
-            {character.abbr || character.character || ''}
-        </div>
-        <div class="cell-name">
-            {character.name || ''}
-        </div>
+
+<div class="cell" title={character.name || character.character || ''} on:click={clickHandler(character)}>
+    <div class="cell-decimal">
+        {character.ord}
     </div>
-</main>
+    <div class="cell-content" class:cell-abbr={!!character.abbr} class:cell-character={!!character.character}>
+        {character.abbr || character.character || ''}
+    </div>
+    <div class="cell-name">
+        {character.name || ''}
+    </div>
+</div>
+
 
 <style>
 .cell {

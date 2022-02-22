@@ -3,52 +3,52 @@
     export let show = false;
 </script>
 
-<main>
-    <div class="popup-overlay" on:click={() => show = false}></div>
-    <div class="ascii-popup">
-        <p>
-            <b>Order:</b> {character.ord}
-        </p>
 
-        {#if !!character.character}
-        <p>
-            <b>Character:</b> {character.character}
-        </p>
-        {/if}
+<div class="popup-overlay" on:click={() => show = false}></div>
+<div class="ascii-popup">
+    <p>
+        <b>Order:</b> {character.ord}
+    </p>
 
-        {#if !!character.abbr}
-        <p>
-            <b>Abbreviation:</b> {character.abbr}
-        </p>
-        {/if}
+    {#if !!character.character}
+    <p>
+        <b>Character:</b> {character.character}
+    </p>
+    {/if}
 
-        {#if !!character.name}
-        <p>
-            <b>Name:</b> {character.name}
-        </p>
-        {/if}
+    {#if !!character.abbr}
+    <p>
+        <b>Abbreviation:</b> {character.abbr}
+    </p>
+    {/if}
 
-        <p>
-            <b>Binary:</b> 0b{character.ord.toString(2)}
-        </p>
-        <p>
-            <b>Octal:</b> 0o{character.ord.toString(8)}
-        </p>
-        <p>
-            <b>Hexadecimal:</b> 0x{character.ord.toString(16)}
-        </p>
+    {#if !!character.name}
+    <p>
+        <b>Name:</b> {character.name}
+    </p>
+    {/if}
 
-        <p>
-            <a href={`https://en.wikipedia.org/wiki${character.wikipedia}` || '#'} target="_blank" class="wikipedia-link">Wikipedia <q>{character.name || character.character || ''}</q></a>
-        </p>
-        
-        {#if !!character.key || !!character.character}
-        <kbd>
-            {character.key || character.character || ''}
-        </kbd>
-        {/if}
-    </div>
-</main>
+    <p>
+        <b>Binary:</b> 0b{character.ord.toString(2)}
+    </p>
+    <p>
+        <b>Octal:</b> 0o{character.ord.toString(8)}
+    </p>
+    <p>
+        <b>Hexadecimal:</b> 0x{character.ord.toString(16)}
+    </p>
+
+    <p>
+        <a href={`https://en.wikipedia.org/wiki${character.wikipedia}` || '#'} target="_blank" class="wikipedia-link">Wikipedia <q>{character.name || character.character || ''}</q></a>
+    </p>
+    
+    {#if !!character.key || !!character.character}
+    <kbd>
+        {character.key || character.character || ''}
+    </kbd>
+    {/if}
+</div>
+
 
 <style>
 p {

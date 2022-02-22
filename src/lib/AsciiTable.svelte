@@ -31,20 +31,20 @@
 
 </script>
 
-<main>
-    <div class="ascii-table">
-        {#each ascii as asciiCharacter}
-        <Cell 
-            character={asciiCharacter} 
-            clickHandler={openPopup} 
-        />
-        {/each}
-    </div>
 
-    {#if showPopup && !!selectedCharacter}
-    <Popup bind:character={selectedCharacter} bind:show={showPopup} />
-    {/if}
-</main>
+<div class="ascii-table">
+    {#each ascii as asciiCharacter}
+    <Cell 
+        character={asciiCharacter} 
+        clickHandler={openPopup} 
+    />
+    {/each}
+</div>
+
+{#if showPopup && !!selectedCharacter}
+<Popup bind:character={selectedCharacter} bind:show={showPopup} />
+{/if}
+
 
 <style>
 :global(body.popup-opened) {
